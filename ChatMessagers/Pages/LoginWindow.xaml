@@ -8,12 +8,14 @@
         Title="LoginWindow" Height="326" Width="365" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid>
         <CheckBox Content="Remember me" HorizontalAlignment="Left" Margin="174,178,0,0" VerticalAlignment="Top" Height="22" Width="140" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
-        <Button x:Name="LogBTN" Content="OK" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="27,226,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="18" Click="LogBTN_Click"/>
+        <Button x:Name="LogBtn" Content="OK" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="27,226,0,0" VerticalAlignment="Top" 
+                Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="18" Click="LogBtn_Click"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="41,64,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="41,113,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
         <TextBox HorizontalAlignment="Left" BorderThickness="3" BorderBrush="Black" Margin="195,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" BorderThickness="3" BorderBrush="Black" Margin="195,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Cancel" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="184,226,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="18"/>
+        <Button x:Name="CancelBtn" Content="Cancel" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" 
+                Margin="184,226,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" Click="CancelBtn_Click" FontSize="18"/>
 
     </Grid>
 </Window>
