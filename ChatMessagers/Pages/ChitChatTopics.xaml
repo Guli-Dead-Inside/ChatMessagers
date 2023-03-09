@@ -1,0 +1,33 @@
+﻿<Window x:Class="ChatMessagers.Pages.ChitChatTopics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatMessagers.Pages"
+        mc:Ignorable="d"
+       Title="ChitChatTopics" Height="477" Width="473" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Hello" HorizontalAlignment="Left" Margin="39,31,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
+        <TextBox x:Name="NameTB" Text="{Binding Name}" HorizontalAlignment="Left" BorderThickness="0" Margin="117,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="32" FontSize="18" FontFamily="Bahnschrift SemiBold">
+        </TextBox>
+        <Label Content="Your open chatrooms" HorizontalAlignment="Left" Margin="39,140,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
+        <ListView x:Name="TopicLST" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="39,188,24,71">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Height="Auto" Width="Auto">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="377" >
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" >
+                                <Label  Height="80" Width="165" Margin="15" x:Name="Namelbl" Content="{Binding Name}"/>
+                            </StackPanel>
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" >
+                                <Label  Height="80" Width="152" Margin="15" x:Name="DateLbl" Content="{Binding Date}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="EmplFinder" Content="Employee Finder" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="45,409,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="LogBTN_Click"/>
+        <Button x:Name="CloseBTN" Content="Close Application" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="296,409,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
+    </Grid>
+</Window>
