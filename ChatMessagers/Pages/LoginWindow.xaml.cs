@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ChatMessagers.db;
 
 namespace ChatMessagers.Pages
 {
@@ -19,6 +20,8 @@ namespace ChatMessagers.Pages
     /// </summary>
     public partial class LoginWindow : Window
     {
+        public Chat_dbEntities dbEntities = new Chat_dbEntities();
+        public static Employee employee;
         public LoginWindow()
         {
             InitializeComponent();
@@ -31,7 +34,35 @@ namespace ChatMessagers.Pages
 
         private void LogBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (UserNameTB.Text == "" || PasswordTB.Text == "")
+            {
+                MessageBox.Show("Введите логин и пароль!");
+            }
+            foreach (var user in dbEntities.Employee)
+            {
+                if (user.UserName == UserNameTB.Text.Trim())
+                {
+                    if (user.Password == PasswordTB.Text.Trim())
+                    {
+                        MessageBox.Show($"Здравствуйте, заместитель директора : {user.Name}");
+                        employee = user;
+                        ChitChatTopics main = new ChitChatTopics();
+                        this.Close();
+                        main.Show();
+                    }
+                }
+            }
+            foreach (var user in dbEntities.Employee)
+            {
+                if (user.UserName != UserNameTB.Text.Trim())
+                {
+                    if (user.Password != PasswordTB.Text.Trim())
+                    {
+                        MessageBox.Show($"Некорректные данные!");
+                        return;
+                    }
+                }
+            }
         }
     }
 }

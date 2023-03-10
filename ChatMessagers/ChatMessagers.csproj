@@ -91,10 +91,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ChatDbModel.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="db\ChatDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="db\ChatDbModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ChatDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="db\ChatMessage.cs">
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Chatroom.cs">
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Department.cs">
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\Employee.cs">
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\GroupChat.cs">
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="db\sysdiagrams.cs">
+      <DependentUpon>ChatDbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\ChitChat.xaml.cs">
       <DependentUpon>ChitChat.xaml</DependentUpon>
@@ -148,6 +171,12 @@
     <Content Include="db\ChatDbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ChatDbModel.Context.cs</LastGenOutput>
+      <DependentUpon>ChatDbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="db\ChatDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ChatDbModel.edmx</DependentUpon>
+      <LastGenOutput>ChatDbModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
