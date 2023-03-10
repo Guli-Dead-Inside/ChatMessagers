@@ -14,7 +14,7 @@
         <Expander HorizontalAlignment="Left" BorderThickness="3" BorderBrush="Black" Height="441" Header="Departments" VerticalAlignment="Center" Width="176">
             <Grid Background="#FFE5E5E5"/>
         </Expander>
-        <TextBox x:Name="EmplSearch" HorizontalAlignment="Left"  BorderThickness="3" BorderBrush="Black" Margin="206,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Grid.ColumnSpan="2">
+        <TextBox x:Name="EmplSearchTB" HorizontalAlignment="Left"  BorderThickness="3" BorderBrush="Black" Margin="206,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Grid.ColumnSpan="2">
             <TextBox.Template>
                 <ControlTemplate>
                     <Border CornerRadius="12" Padding="2" BorderThickness="1" BorderBrush="Black">
@@ -23,7 +23,7 @@
                 </ControlTemplate>
             </TextBox.Template>
         </TextBox>
-        <ListView ScrollViewer.VerticalScrollBarVisibility="Auto" BorderBrush="Black" BorderThickness="2" x:Name="ListEmpl" Margin="215,37,36,0" Grid.ColumnSpan="2">
+        <ListView x:Name="SearchLst" ScrollViewer.VerticalScrollBarVisibility="Auto" BorderBrush="Black" BorderThickness="2" Margin="215,37,36,0" Grid.ColumnSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1" Height="Auto" Width="Auto">

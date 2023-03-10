@@ -11,7 +11,7 @@
         <TextBox x:Name="NameTB" Text="{Binding Name}" HorizontalAlignment="Left" BorderThickness="0" Margin="117,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="32" FontSize="18" FontFamily="Bahnschrift SemiBold">
         </TextBox>
         <Label Content="Your open chatrooms" HorizontalAlignment="Left" Margin="39,140,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Bahnschrift SemiBold"/>
-        <ListView x:Name="TopicLST" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="39,188,24,71">
+        <ListView x:Name="TopicLst" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="39,188,24,71">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1" Height="Auto" Width="Auto">
@@ -27,7 +27,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="EmplFinder" Content="Employee Finder" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="45,409,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="LogBTN_Click"/>
-        <Button x:Name="CloseBTN" Content="Close Application" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="296,409,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
+        <Button x:Name="EmplFinderBtn" Content="Employee Finder" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="45,409,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="LogBTN_Click"/>
+        <Button x:Name="CloseBtn" Content="Close Application" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="296,409,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
     </Grid>
 </Window>

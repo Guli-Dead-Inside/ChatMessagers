@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Topic" Height="477" Width="473" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <Grid>
-        <Button x:Name="AddUserBTN" Content="Leave Chatroom" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="0,289,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
-        <Button x:Name="ChangeTopicBTN" Content="Change Topic" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="0,260,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
-        <Button x:Name="LeaveChatroomBTN" Content="Add User" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="0,231,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
+        <Button x:Name="AddUserBtn" Content="Leave Chatroom" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="0,289,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
+        <Button x:Name="ChangeTopicBtn" Content="Change Topic" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="0,260,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
+        <Button x:Name="LeaveChatroomBtn" Content="Add User" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="0,231,0,0" VerticalAlignment="Top" Height="29" Width="142" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
         <TextBox HorizontalAlignment="Left" BorderThickness="3" BorderBrush="Black" Margin="0,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="382" Height="143"/>
-        <Button x:Name="SendBTN" Content="Send" Background="LightBlue" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="382,318,0,0" VerticalAlignment="Top" Height="143" Width="91" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
+        <Button x:Name="SendBtn" Content="Send" Background="LightBlue" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Margin="382,318,0,0" VerticalAlignment="Top" Height="143" Width="91" FontFamily="Bahnschrift SemiBold" FontSize="16" Click="CloseBTN_Click"/>
         <ListView d:ItemsSource="{d:SampleData ItemCount=1}" Margin="0,0,331,230">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -43,7 +43,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ListView x:Name="TopicLST" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="142,0,0,143">
+        <ListView x:Name="TopicLst" d:ItemsSource="{d:SampleData ItemCount=2}" Margin="142,0,0,143">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border  BorderThickness="1" Height="Auto" Width="Auto">

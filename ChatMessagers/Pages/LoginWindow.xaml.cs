@@ -24,9 +24,14 @@ namespace ChatMessagers.Pages
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
         {
+            Environment.Exit(0);
+        }
 
+        private void LogBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
