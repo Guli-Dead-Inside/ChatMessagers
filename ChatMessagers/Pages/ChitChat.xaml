@@ -12,7 +12,22 @@
             <ColumnDefinition Width="218*"/>
         </Grid.ColumnDefinitions>
         <Expander HorizontalAlignment="Left" BorderThickness="3" BorderBrush="Black" Height="441" Header="Departments" VerticalAlignment="Center" Width="176">
-            <Grid Background="#FFE5E5E5"/>
+            <Grid Background="#FFE5E5E5">
+                <StackPanel>
+                    <CheckBox Content="Admin">
+
+                    </CheckBox>
+                    <CheckBox Content="IT Helpdesk">
+
+                    </CheckBox>
+                    <CheckBox Content="Sales">
+
+                    </CheckBox>
+                    <CheckBox Content="Marketing">
+
+                    </CheckBox>
+                </StackPanel>    
+            </Grid>
         </Expander>
         <TextBox x:Name="EmplSearchTB" HorizontalAlignment="Left"  BorderThickness="3" BorderBrush="Black" Margin="206,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Grid.ColumnSpan="2">
             <TextBox.Template>
